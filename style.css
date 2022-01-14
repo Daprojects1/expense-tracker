@@ -33,6 +33,9 @@ label{
 input:focus{
     border: 2px solid palegreen;
 }
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
 input[name=userText]{
     width:60vw;
     height: 30px;
