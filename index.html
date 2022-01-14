@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense-Tracker</title>
-    <link rel="stylesheet" href="node_modules/normalize.css/">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,15 +16,15 @@
             <h2>Add A New Item:</h2>
             <div>
                 <label for="userExpense">Name:</label>
-                <input type="text" placeholder="What was the expense made?" name="userText" id="userExpense" required>
+                <input type="text" placeholder="What was the expense made?" name="userText" id="userExpense" >
                 <div class="innerInput">
                     <label for="userdate">Date:</label>
-                    <input type="date" name="user_date" id="userdate" required>
+                    <input type="date" name="user_date" id="userdate" >
                     <label for="new-numb">Amount:</label>
-                    <input type="number" name="newNumb" id="new-numb" min="1" required>
+                    <input type="number" name="newNumb" id="new-numb" min="1" >
                 </div>
             </div>
-            <button>Add Expense</button>
+            <button class="mainbtn">Add Expense</button>
         </form>
         <table>
             <tr>
@@ -33,7 +32,7 @@
                 <th>Date</th>
                 <th>Amount</th>
             </tr>
-            <tr>
+            <tr class="none">
                 <td colspan="3">No expenses added yet!</td>
             </tr>
         </table>
