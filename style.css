@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    padding-top: 30px;
+}
+
+main{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    padding-top: 1.3rem;
+    text-align: center;
+    color: rgb(26, 139, 26);
+}
+.flex { 
+   display: flex;
+}
+
+label{
+    font-size: 20px;
+}
+input:focus{
+    border: 2px solid palegreen;
+}
+input[name=userText]{
+    width:60vw;
+    height: 30px;
+    margin: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: none;
+    border-bottom: 2px solid palegreen;
+    padding:5px;
+}
+
+.innerInput > input{
+    width: 25vw;
+    margin: 8px;
+    border-style: none;
+    border-bottom: 2px solid palegreen;
+    padding:5px;
+}
+
+form{
+    flex-direction: column;
+}
+
+button{
+    width: 200px;
+    height: 30px;
+    justify-content: center;
+    align-self: center;
+    margin: 10px;
+    background-color: palegreen;
+    border: none;
+    border-radius: 20px;
+}
+
+table{
+    width: 60vw;
+    text-align: left;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+tr > td{
+    max-width: 50px;
+    background-color: rgb(226, 229, 226);
+    padding: 5px;
+}
