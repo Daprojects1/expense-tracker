@@ -77,9 +77,15 @@ table{
     margin-top: 30px;
     padding: 5px;
 }
-
+.padd {
+   padding:10px;
+}
 tr > td{
     max-width: 50px;
     background-color: rgb(226, 229, 226);
     padding: 5px;
+}
+
+.displayNone {
+   display: none;
 }
