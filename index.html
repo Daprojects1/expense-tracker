@@ -14,17 +14,19 @@
     <main class="flex">
         <form class="flex">
             <h2>Add A New Item:</h2>
-            <div>
-                <label for="userExpense">Name:</label>
-                <input type="text" placeholder="What was the expense made?" name="userText" id="userExpense" >
-                <div class="innerInput">
+            <div class="expenseTrack">
+                <div class="hundred flex">
+                    <label for="userExpense">Name:</label>
+                    <input type="text" placeholder="What was the expense made?" name="userText" id="userExpense" required>
+                </div>
+                <div class="innerInput flex">
                     <label for="userdate">Date:</label>
-                    <input type="date" name="user_date" id="userdate" >
+                    <input type="date" name="user_date" id="userdate" required>
                     <label for="new-numb">Amount:</label>
-                    <input type="number" name="newNumb" id="new-numb" min="1" >
+                    <input type="number" name="newNumb" id="new-numb" min="1" required>
                 </div>
             </div>
-            <button class="mainbtn">Add Expense</button>
+            <button class="mainbtn" type="submit">Add Expense</button>
         </form>
         <table>
             <tr>
