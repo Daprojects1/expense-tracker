@@ -90,11 +90,19 @@ tr > td{
 .displayNone {
    display: none;
 }
-
-button{
+.relative {
+    position: relative;
+}
+.newBtn{
+    position: absolute;
     width: 20px;
     height:20px;
-    margin-left: 100px;
+    margin-left: 75px;
+}
+@media screen and (min-width:720px){
+    .newBtn{
+        margin-left: 200px;
+    }
 }
 
 .color {
