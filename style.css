@@ -44,6 +44,7 @@ input[name=userText]{
     border-style: none;
     border-bottom: 2px solid palegreen;
     padding:5px;
+    font-size: 1.05rem;
 }
 
 .innerInput > input{
@@ -59,7 +60,7 @@ form{
     flex-direction: column;
 }
 
-button{
+.mainbtn{
     width: 200px;
     height: 30px;
     justify-content: center;
@@ -88,4 +89,17 @@ tr > td{
 
 .displayNone {
    display: none;
+}
+
+button{
+    width: 20px;
+    height:20px;
+    margin-left: 100px;
+}
+
+.color {
+    background-color: greenyellow;
+    border:1px solid green;
+    color: black;
+    font-weight: 900;
 }

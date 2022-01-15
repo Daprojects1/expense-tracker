@@ -13,10 +13,17 @@ const addExpense = (e)=> {
     let newTrow = document.createElement("tr")
     newRow.forEach((item)=>{
       let newTdc = document.createElement("td")
-      let ch = newTdc.appendChild(document.createTextNode(item.value))
-      newTrow.appendChild(ch)
+      newTrow.appendChild(newTdc)
+      newTdc.innerHTML= item.value;
+      if (item === newRow[2]){
+        newTdc.innerHTML = "£"+ " "+item.value
+        let newbtn = document.createElement("button")
+        newbtn.classList.add("color")
+        newbtn.innerHTML= "X";
+        newTdc.appendChild(newbtn)
+   }
+      table.appendChild(newTrow)
     })
-    table.appendChild(newTrow)
 }
 
 mainBtn.addEventListener("click", addExpense)
