@@ -4,6 +4,8 @@ let amount = document.querySelector("#new-numb");
 let mainBtn = document.querySelector(".mainbtn")
 let firstTRow = document.querySelector(".none")
 let table = document.querySelector("table")
+const tbod = document.querySelector(".tbod")
+const noExpense = document.querySelector(".noexp")
 
 // adding the different input types into an array to iterate over it in main func
 let newRow = [itemName, date, amount];
@@ -14,10 +16,21 @@ let reset = ()=> {
   amount.value="";
 }
 
-let mainFunc = (arr)=> {
+const checkIfExpense = () => {
+  if (document.querySelectorAll(".newTrow").length >= 1) {
+    noExpense.classList.add("none")
+  } else {
+    noExpense.classList.remove("none")
+  }
+}
+
+
+let mainFunc = (arr) => {
+  console.log(arr)
   //  checks value length to see whether to run function.
   if (itemName.value.length > 0 && date.value.length > 0 && amount.value.length > 0){
     let newTrow = document.createElement("tr")
+    newTrow.classList.add("newTrow")
     //  function below iterates through each input type.
     arr.forEach((item)=>{
     // creates a table data cell for each and appends it to created table row above.
@@ -39,6 +52,7 @@ let mainFunc = (arr)=> {
         newbtn.addEventListener("click", (e)=> {
              e.preventDefault();  
             newTrow.remove();
+            checkIfExpense()
         })
         // appending to table
         table.appendChild(newTrow)
@@ -47,12 +61,13 @@ let mainFunc = (arr)=> {
   }
 }
 
+
 const addExpense = (e)=> {
     // removing initial message
-    e.preventDefault();
-    firstTRow.remove();
-   // function that creates new elements.  
-     mainFunc(newRow);
+  e.preventDefault();
+  // function that creates new elements.  
+  mainFunc(newRow);
+  checkIfExpense()
     //  values reset after function is run.
     reset();
 }
